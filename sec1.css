@@ -1,0 +1,174 @@
+/* Profile and description div container */
+.sec1{
+    display: flex;
+    height: 90vh;  /*(or) margin-top: 10%;*/
+    align-items: center;
+    gap: 60px;
+    
+    
+}
+
+/* Profile pic div container */
+.sec1-1{
+    margin-left: 100px;
+}
+
+/* Profile pic */
+.sec1-1 img{
+    /* width: 400px;
+    border-radius: 400px; */
+    width: 400px;
+    height: 400px;        /* ensures a perfect square */
+    object-fit: cover;    /* keeps image centered & clean */
+    object-position: center 20%;
+    border-radius: 50%;
+    
+}
+
+/* Description */
+.sec1-2{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Description (First line) */
+.sec1-2-1{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+/* Description (second line h1) */
+h1{
+    font-size: 50px;
+    color: darkorange;
+}
+
+/* Description (Third line */
+.sec1-2-3{
+    font-weight: 600;
+    font-size: 22px;
+}
+
+/* Description (fourth line) */
+p{
+    font-size: 18px;
+    width: 90%;
+}
+
+.btns{
+    display: flex;
+    gap: 20px;
+}
+
+/* button 1 */
+.btns >:nth-child(1){
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid black;
+    background-color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+
+} 
+
+/* button 1 hover */
+.btns >:nth-child(1):hover{
+    background-color: black;
+    color: white;
+}
+
+/* button 2 */
+.btns >:nth-child(2){
+    padding: 11px 21px;
+    background-color: black;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid black;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+} 
+
+/* button 2 hover*/
+.btns >:nth-child(2):hover{
+    background-color: darkorange;
+    color: white;
+    border-color: darkorange;  
+}
+
+/* Description (Images) */
+.social{
+    display: flex;
+    gap: 20px;
+}
+
+.social img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.social img:hover{
+    transform: scale(0.9);
+}
+
+
+@media(max-width:1024px){
+    .sec1{
+        /* display: flex; */
+        flex-direction: column;
+        height: 100%;
+        margin-bottom: 10px;
+        padding-bottom: 50px;
+    }
+    p{
+        text-align: center;
+        width: 70%;
+    }
+    .sec1-1{
+    margin-left: 0px;
+    }
+    .sec1-1 img{
+            width: 350px;
+        height: 350px;
+        object-fit: cover;
+        object-position: center 20%;
+        border-radius: 50%;
+    }
+    .sec1-2{
+    
+    align-items: center;
+    padding-bottom: 50px;
+}
+}
+
+@media(max-width:767px){
+    .sec1{
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        font-size: 40px;
+    }
+    p{
+        text-align: center;
+    }
+    .sec1-1{
+        margin-top: 50px;
+    }
+    .sec1-1 img{
+     width: 250px;
+        height: 250px;
+        object-fit: cover;
+        object-position: center 20%;
+        border-radius: 50%;
+}
+    .sec1-2{
+        align-items: center;
+}
+}

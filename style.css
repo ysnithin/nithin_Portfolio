@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    /* height: 70px; */
+    padding: 0px 100px;
+}
+
+.logo{
+    width : 40%;
+    font-size: 30px;
+    font-weight: 600;
+    color: darkorange;
+}
+.menu-bar{
+    width: 50%;
+    display: flex;
+    list-style: none;                   /* removes dots*/
+    justify-content: space-around;
+    margin-left: 300px;
+}
+
+.menu-bar li{
+    font-size: 20px;
+    transition: all 0.3 ease;
+}
+
+.menu-bar li:hover{
+    transform: translateY(-2px);
+}
+
+a{
+    text-decoration: none;              /*removes underline*/
+    color: black;
+    transition: all 0.3s ease;
+}
+
+a:hover{
+    color: darkorange;
+    text-decoration: underline;         /* add underline when hover*/
+    text-underline-offset: 10px;        /* gap in between text and underline*/
+    text-decoration-color: darkorange;
+}
+
+.navbar-menu {
+  display: none;
+}
+
+.arrow{
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+}
+
+.arrow2{
+    transform: rotate(180deg);
+    bottom: 50px;
+}
+.sec,.sec3,.sec4,.sec6{
+    position: relative;
+}
+.arrow img{
+    width: 40px;
+}
+
+@media(min-width:1025px){
+    @keyframes appear {
+    from{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+}
+
+.sec1,.sec2,.sec3,.sec4,.sec5{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+}
+
+
+
+@media (max-width: 1024px){
+    .arrow{
+        display: none;
+    }
+    .navbar{
+        display: none;
+    }
+    .navbar-menu{
+        display: flex;
+    }
+    .hamburger{
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        position: fixed; 
+        right: 30px;
+        top: 20px; 
+        /* or */
+        /* margin-top: 20px;
+        margin-left: 500px; */
+        z-index: 100;
+    }
+    .hamburger i{
+        font-size: 35px;
+        padding: 8px;
+    }
+    .navbar-menu .logo{
+        margin-top: 20px;
+        padding-left: 30px;
+    }
+    .navbar-menu .menu-bar{
+        display: flex;
+        flex-direction: column;
+        background-color: darkorange;
+        position: fixed;
+        right: 0;
+        top: 70px;
+        padding: 10px;
+        gap: 10px;
+        margin-right: -550px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        z-index: 100;
+    }
+    .navbar-menu .menu-bar.show{
+        margin-right: 0px;
+    }
+    .navbar-menu .menu-bar li a{
+        display: block;
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px;
+        font-weight: 600;
+    }
+}
+
+
+@media(max-width:767px){
+    .logo{
+        text-wrap: nowrap;
+    }
+    .navbar-menu .logo{
+        margin-top: 25px;
+        padding-left: 10px;
+        font-size: 25px;
+    }
+}
